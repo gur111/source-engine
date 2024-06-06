@@ -101,6 +101,15 @@ jobs:
       run: |
         scripts/build-macos-amd64.sh
 
+  build-macos-arm:
+    runs-on: macos-14
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build macos-arm
+      run: |
+        scripts/build-macos-arm.sh
+
   build-dedicated-macos-amd64:
     runs-on: macos-latest
 
